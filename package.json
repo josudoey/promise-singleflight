@@ -1,0 +1,11 @@
+{
+  "name": "promise-singleflight",
+  "version": "0.0.0",
+  "description": "provide a wrap async function for singleflight",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joey Fang",
+  "license": "ISC"
+}
