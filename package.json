@@ -15,5 +15,19 @@
     "eslint-plugin-import": "^2.23.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josudoey/promise-singleflight.git"
+  },
+  "keywords": [
+    "promise",
+    "singleflight",
+    "async"
+  ],
+  "bugs": {
+    "url": "https://github.com/josudoey/promise-singleflight/issues"
+  },
+  "homepage": "https://github.com/josudoey/promise-singleflight#readme"
 }
