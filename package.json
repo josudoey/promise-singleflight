@@ -1,6 +1,6 @@
 {
   "name": "promise-singleflight",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "provide a wrap async function for singleflight",
   "scripts": {
     "compile": "tsc && tsc -p tsconfig.mjs.json",
