@@ -52,13 +52,14 @@ function createPromiseSingleflight() {
                                 return __generator(this, function (_a) {
                                     switch (_a.label) {
                                         case 0:
-                                            if (!group.has(key)) return [3 /*break*/, 2];
-                                            return [4 /*yield*/, group.get(key)];
+                                            handle = group.get(key);
+                                            if (!(typeof handle !== 'undefined')) return [3 /*break*/, 2];
+                                            return [4 /*yield*/, handle];
                                         case 1: return [2 /*return*/, _a.sent()];
                                         case 2:
-                                            handle = Promise.resolve(fn());
-                                            handle.then(forget, forget);
+                                            handle = fn();
                                             group.set(key, handle);
+                                            handle.then(forget, forget);
                                             return [4 /*yield*/, handle];
                                         case 3: return [2 /*return*/, _a.sent()];
                                     }

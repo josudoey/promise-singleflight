@@ -3,12 +3,13 @@ export function createPromiseSingleflight() {
     return async function (key, fn) {
         const forget = function () { group.delete(key); };
         const call = async function (key, fn) {
-            if (group.has(key)) {
-                return await group.get(key);
+            let handle = group.get(key);
+            if (typeof handle !== 'undefined') {
+                return await handle;
             }
-            const handle = Promise.resolve(fn());
-            handle.then(forget, forget);
+            handle = fn();
             group.set(key, handle);
+            handle.then(forget, forget);
             return await handle;
         };
         return await call(key, fn);
