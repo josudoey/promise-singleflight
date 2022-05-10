@@ -4,19 +4,20 @@
   "description": "provide a wrap async function for singleflight",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ncu": "npx npm-check-updates"
   },
   "author": "Joey Fang",
   "license": "ISC",
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.27.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.23.3",
+    "@babel/core": "^7.17.10",
+    "@babel/eslint-parser": "^7.17.0",
+    "eslint": "^8.15.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0"
+    "eslint-plugin-promise": "^6.0.0"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/josudoey/promise-singleflight.git"
