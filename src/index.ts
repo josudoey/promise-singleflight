@@ -1,16 +1,18 @@
-type SingleflightHandler = () => any;
-export function createPromiseSingleflight(): (key: string, fn: SingleflightHandler) => Promise<any> {
-  const group: any = {}
-  return function (key: string, fn: SingleflightHandler) {
-    const forget = function () { delete group[key] }
-    const call = function (key: string, fn: SingleflightHandler) {
-      if (!group[key]) {
-        group[key] = Promise.resolve(fn())
-        group[key].then(forget, forget)
+type SingleflightHandler = () => any
+export function createPromiseSingleflight (): (key: string, fn: SingleflightHandler) => Promise<any> {
+  const group: Map<string, Promise<any>> = new Map()
+  return async function (key: string, fn: SingleflightHandler) {
+    const forget = function (): void { group.delete(key) }
+    const call = async function (key: string, fn: SingleflightHandler): Promise<any> {
+      if (group.has(key)) {
+        return await group.get(key)
       }
-      return group[key]
+      const handle = Promise.resolve(fn())
+      handle.then(forget, forget)
+      group.set(key, handle)
+      return await handle
     }
-    return call(key, fn)
+    return await call(key, fn)
   }
 }
 

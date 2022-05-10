@@ -1,15 +1,17 @@
 export function createPromiseSingleflight() {
-    const group = {};
-    return function (key, fn) {
-        const forget = function () { delete group[key]; };
-        const call = function (key, fn) {
-            if (!group[key]) {
-                group[key] = Promise.resolve(fn());
-                group[key].then(forget, forget);
+    const group = new Map();
+    return async function (key, fn) {
+        const forget = function () { group.delete(key); };
+        const call = async function (key, fn) {
+            if (group.has(key)) {
+                return await group.get(key);
             }
-            return group[key];
+            const handle = Promise.resolve(fn());
+            handle.then(forget, forget);
+            group.set(key, handle);
+            return await handle;
         };
-        return call(key, fn);
+        return await call(key, fn);
     };
 }
 export default createPromiseSingleflight;
