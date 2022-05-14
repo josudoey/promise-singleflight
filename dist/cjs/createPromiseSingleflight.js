@@ -36,8 +36,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.create = void 0;
-function create() {
+exports.createPromiseSingleflight = void 0;
+function createPromiseSingleflight() {
     var group = new Map();
     return function (key, fn) {
         return __awaiter(this, void 0, void 0, function () {
@@ -73,5 +73,4 @@ function create() {
         });
     };
 }
-exports.create = create;
-exports.default = create;
+exports.createPromiseSingleflight = createPromiseSingleflight;

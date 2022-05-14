@@ -1,4 +1,4 @@
-export function create <Key, ReturnValue> (): (key: Key, fn: () => Promise<ReturnValue>) => Promise<ReturnValue> {
+export function createPromiseSingleflight <Key, ReturnValue> (): (key: Key, fn: () => Promise<ReturnValue>) => Promise<ReturnValue> {
   const group: Map<Key, Promise<ReturnValue>> = new Map()
   return async function (key: Key, fn: () => Promise<ReturnValue>) {
     const forget = function (): void { group.delete(key) }
@@ -15,5 +15,3 @@ export function create <Key, ReturnValue> (): (key: Key, fn: () => Promise<Retur
     return await call(key, fn)
   }
 }
-
-export default create
