@@ -1,6 +1,6 @@
 {
   "name": "promise-singleflight",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "provide a wrap async function for singleflight",
   "scripts": {
     "compile": "tsc && tsc -p tsconfig.cjs.json",
@@ -8,6 +8,7 @@
   },
   "main": "dist/cjs/index.js",
   "module": "dist/mjs/index.js",
+  "types": "dist/mjs/index.d.ts",
   "author": "Joey Fang",
   "license": "ISC",
   "devDependencies": {
