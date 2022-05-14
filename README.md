@@ -25,8 +25,8 @@ singleflight(key, async function(){
 or
 
 ```mjs
-import createPromiseSingleflight from 'promise-singleflight'
-const singleflight = createPromiseSingleflight()
+import * as PromiseSingleflight from 'promise-singleflight'
+const singleflight = PromiseSingleflight.create()
 singleflight(key, async function(){
     ...
     return value

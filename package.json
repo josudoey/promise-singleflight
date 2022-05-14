@@ -1,10 +1,10 @@
 {
   "name": "promise-singleflight",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "provide a wrap async function for singleflight",
   "scripts": {
     "clean": "rm -r dist",
-    "compile": "npm run build:cjs;npm run build:esm;npm run build:types",
+    "compile": "npm run clean;npm run build:cjs;npm run build:esm;npm run build:types",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:types": "tsc -p tsconfig.types.json",
