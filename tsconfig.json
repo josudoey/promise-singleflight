@@ -1,7 +1,5 @@
 {
     "compilerOptions": {
-        "rootDir": "src",
-        "baseUrl": "src",
         "target": "ES2017",
         "module": "ES2015",
         "lib": [
