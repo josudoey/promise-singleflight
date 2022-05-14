@@ -1,9 +1,9 @@
 {
   "name": "promise-singleflight",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "provide a wrap async function for singleflight",
   "scripts": {
-    "compile": "tsc && tsc -p tsconfig.mjs.json",
+    "compile": "tsc && tsc -p tsconfig.cjs.json",
     "ncu": "npx npm-check-updates"
   },
   "main": "dist/cjs/index.js",

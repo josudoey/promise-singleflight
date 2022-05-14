@@ -1,9 +1,10 @@
 {
     "compilerOptions": {
-        "target": "ES5",
-        "module": "commonjs",
+        "baseUrl": "src",
+        "target": "ES2017",
+        "module": "ES2015",
         "lib": [
-            "ES2015",
+            "ES2017",
             "ES2020.BigInt",
             "DOM"
         ],
@@ -12,7 +13,7 @@
         "esModuleInterop": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
-        "outDir": "dist/cjs"
+        "outDir": "dist/mjs"
     },
     "include": [
         "src/**/*"
