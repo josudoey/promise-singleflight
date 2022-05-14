@@ -1,16 +1,19 @@
 {
   "name": "promise-singleflight",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "provide a wrap async function for singleflight",
   "scripts": {
-    "compile": "tsc && tsc -p tsconfig.cjs.json",
+    "clean": "rm -r dist",
+    "compile": "npm run build:cjs;npm run build:esm;npm run build:types",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:types": "tsc -p tsconfig.types.json",
     "ncu": "npx npm-check-updates"
   },
   "main": "dist/cjs/index.js",
-  "module": "dist/mjs/index.js",
-  "types": "dist/mjs/index.d.ts",
-  "type": "module",
-  "author": "Joey Fang",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "author": "Joey Fang <josudoey@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.0.1",
@@ -26,6 +29,9 @@
     "type": "git",
     "url": "git+https://github.com/josudoey/promise-singleflight.git"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "promise",
     "singleflight",
