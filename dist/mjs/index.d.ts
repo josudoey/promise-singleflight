@@ -1,2 +1,2 @@
-export declare function createPromiseSingleflight<K, V>(): (key: K, fn: () => Promise<V>) => Promise<V>;
-export default createPromiseSingleflight;
+export declare function create<Key, ReturnValue>(): (key: Key, fn: () => Promise<ReturnValue>) => Promise<ReturnValue>;
+export default create;

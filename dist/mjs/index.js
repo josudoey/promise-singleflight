@@ -1,4 +1,4 @@
-export function createPromiseSingleflight() {
+export function create() {
     const group = new Map();
     return async function (key, fn) {
         const forget = function () { group.delete(key); };
@@ -15,4 +15,4 @@ export function createPromiseSingleflight() {
         return await call(key, fn);
     };
 }
-export default createPromiseSingleflight;
+export default create;

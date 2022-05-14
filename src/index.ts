@@ -1,8 +1,8 @@
-export function createPromiseSingleflight <K, V> (): (key: K, fn: () => Promise<V>) => Promise<V> {
-  const group: Map<K, Promise<V>> = new Map()
-  return async function (key: K, fn: () => Promise<V>) {
+export function create <Key, ReturnValue> (): (key: Key, fn: () => Promise<ReturnValue>) => Promise<ReturnValue> {
+  const group: Map<Key, Promise<ReturnValue>> = new Map()
+  return async function (key: Key, fn: () => Promise<ReturnValue>) {
     const forget = function (): void { group.delete(key) }
-    const call = async function (key: K, fn: () => Promise<V>): Promise<V> {
+    const call = async function (key: Key, fn: () => Promise<ReturnValue>): Promise<ReturnValue> {
       let handle = group.get(key)
       if (typeof handle !== 'undefined') {
         return await handle
@@ -16,4 +16,4 @@ export function createPromiseSingleflight <K, V> (): (key: K, fn: () => Promise<
   }
 }
 
-export default createPromiseSingleflight
+export default create
