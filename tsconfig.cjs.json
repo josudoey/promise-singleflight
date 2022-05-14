@@ -16,6 +16,6 @@
         "outDir": "dist/cjs"
     },
     "include": [
-        "src/**/*"
+        "src"
     ]
 }
