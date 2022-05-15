@@ -8,7 +8,7 @@ $ npm install --save promise-singleflight
 ```
 
 ## API
-### create<Key, ReturnValue>(): (key: Key, fn: () => Promise<ReturnValue>) => Promise<ReturnValue>;
+### create<Key, ReturnValue>(): (key: Key, fn: () => Promise\<ReturnValue\>) => Promise\<ReturnValue\>;
 
 Return a singleflight wrap function.
 
