@@ -1,5 +1,5 @@
 # promise-singleflight
-[![NPM](https://nodei.co/npm/promise-singleflight.svg?downloads=true&downloadRank=true)](https://nodei.co/npm/promise-solo/)
+[![NPM](https://nodei.co/npm/promise-singleflight.svg?downloads=true&downloadRank=true)](https://nodei.co/npm/promise-singleflight/)
 
 ## Installation
 
