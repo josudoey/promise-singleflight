@@ -1,13 +1,6 @@
 {
-  "extends": "./tsconfig",
+  "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
-    "target": "ES5",
-    "module": "commonjs",
-    "lib": [
-      "ES2015",
-      "ES2020.BigInt",
-      "DOM"
-    ],
     "outDir": "./dist/cjs"
   }
 }

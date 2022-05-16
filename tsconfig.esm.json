@@ -1,13 +1,6 @@
 {
-  "extends": "./tsconfig",
+  "extends": "@tsconfig/esm/tsconfig.json",
   "compilerOptions": {
-    "target": "ES2017",
-    "module": "ES2015",
-    "lib": [
-      "ES2017",
-      "ES2020.BigInt",
-      "DOM"
-    ],
     "outDir": "./dist/esm"
   }
 }
