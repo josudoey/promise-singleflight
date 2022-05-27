@@ -72,3 +72,13 @@ async function queryData(path) {
 // data:/a
 // data:/b
 ```
+
+
+## Reference Docs
+- https://devblogs.microsoft.com/typescript/announcing-typescript-4-5-beta/#new-file-extensions
+- https://github.com/google/flatbuffers/blob/master/package.json
+- https://github.com/tomchen/example-typescript-package
+- https://eslint.org/docs/user-guide/getting-started
+- https://www.npmjs.com/package/eslint-config-standard-with-typescript
+- https://www.npmjs.com/package/ts-jest
+- https://www.npmjs.com/package/ts-node
