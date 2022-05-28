@@ -1,6 +1,6 @@
 {
   "name": "promise-singleflight",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "provide a wrap async function for singleflight",
   "scripts": {
     "clean": "rm -r dist",
