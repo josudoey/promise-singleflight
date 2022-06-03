@@ -1,6 +1,6 @@
 {
   "name": "promise-singleflight",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "provide a wrap async function for singleflight",
   "scripts": {
     "clean": "rm -r dist",
@@ -35,8 +35,10 @@
     "url": "git+https://github.com/josudoey/promise-singleflight.git"
   },
   "files": [
-    "dist",
-    "types"
+    "index.js",
+    "esm.mjs",
+    "lib/*.js",
+    "types/*.d.ts"
   ],
   "keywords": [
     "promise",
