@@ -1,6 +1,0 @@
-{
-  "extends": "@tsconfig/esm/tsconfig.json",
-  "compilerOptions": {
-    "outDir": "./dist/esm"
-  }
-}

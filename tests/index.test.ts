@@ -1,5 +1,5 @@
-import * as PromiseSingleflight from '../index'
-import { createPromiseSingleflight } from '../index'
+import * as PromiseSingleflight from '../'
+import { createPromiseSingleflight } from '../'
 
 describe('create', function () {
   it('equal createPromiseSingleflight', function () {

@@ -1,4 +1,4 @@
-import { createPromiseSingleflight } from '../createPromiseSingleflight'
+import { createPromiseSingleflight } from '../'
 let singleflight = createPromiseSingleflight<string, string>()
 
 beforeEach(function () {
