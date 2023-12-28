@@ -1,14 +1,14 @@
-import { createPromiseSingleflight } from '../'
-let singleflight = createPromiseSingleflight<string, string>()
+import { createPromiseSingleflight } from './singleflight'
+let singleflight = createPromiseSingleflight<string,string>()
 
 beforeEach(function () {
-  singleflight = createPromiseSingleflight <string, string>()
+  singleflight = createPromiseSingleflight<string,string>()
 })
 
 describe('createPromiseSingleflight', function () {
   let count = 0
   async function delay (ms: number): Promise<void> {
-    return await new Promise<void>(function (resolve) {
+    await new Promise<void>(function (resolve) {
       setTimeout(resolve, ms)
     })
   }
